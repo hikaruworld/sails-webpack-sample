@@ -34,5 +34,10 @@
     "url": "git://github.com/morizou/webpack-sample.git"
   },
   "author": "morizou",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "webpack": "^1.4.15",
+    "webpack-dev-server": "^1.7.0",
+    "grunt-webpack": "^1.0.8"
+  }
 }
