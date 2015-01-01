@@ -13,9 +13,7 @@ module.exports = {
    * `UserController.index()`
    */
   index: function (req, res) {
-    return res.json({
-      todo: 'index() is not implemented yet!'
-    });
+    return res.ok();
   }
 };
 
