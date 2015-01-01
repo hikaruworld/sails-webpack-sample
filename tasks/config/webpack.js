@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 
 	grunt.config.set("webpack", {
 		options: webpackConfig,
-		dev: {
+		build: {
 		}
 	});
 

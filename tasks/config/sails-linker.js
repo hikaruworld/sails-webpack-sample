@@ -260,7 +260,26 @@ module.exports = function(grunt) {
 			files: {
 				'views/**/*.jade': ['.tmp/public/jst.js']
 			}
-		}
+		},
+
+		devWebPackJade: {
+			options: {
+				startTag: "// WEBPACK_SCRIPTS",
+				endTag: "// WEBPACK_SCRIPTS END",
+				fileTmpl: "script(src=\"%s\")",
+				appRoot: ".tmp/public",
+				relative: false
+			},
+			files: function() {
+				var path = require("path"),
+						entry = require("../entry");
+
+				var keyGenerator   = function(f) { return f; },
+						valueGenerator = function(f) { return path.join(".tmp/public/dist/js", entry.splitext(f) + ".js"); };
+
+				return entry.entryFiles("./views", keyGenerator, valueGenerator);
+			}()
+        }
 	});
 
 	grunt.loadNpmTasks('grunt-sails-linker');

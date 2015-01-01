@@ -9,6 +9,10 @@ var excludeFolders = [
 
 /** @type {Array} 除外ファイル一覧(現状ではファイル名の単純一致を用いる) */
 var excludeFiles = [
+  "homepage.jade",
+  "403.jade",
+  "404.jade",
+  "500.jade",
   "layout.jade",
 ];
 
