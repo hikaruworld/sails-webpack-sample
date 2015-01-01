@@ -1,6 +1,12 @@
 extends ../layout
 
 
+block append scripts
+  // WEBPACK_SCRIPTS
+  script(src="/dist/js/views/user/index.js")
+  // WEBPACK_SCRIPTS END
+
+
 block body
     
   h1 Hello World!!
